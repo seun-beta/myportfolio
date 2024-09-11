@@ -1,0 +1,264 @@
+/* Light and Dark Mode Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #20454a; /* Replace with the actual color from the image */
+    color: #fff;
+}
+
+/* Light Mode */
+body.light-mode {
+    background-color: #F4F6F6;
+    color: #000;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 20px 0;
+    margin: 0;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s, border-bottom-color 0.3s;
+}
+
+/* Dark Mode Links */
+body.dark-mode header nav ul li a {
+    color: #b3b3b3;
+}
+
+body.dark-mode header nav ul li a.active {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+body.dark-mode header nav ul li a:hover {
+    color: #fff;
+}
+
+/* Light Mode Links */
+body.light-mode header nav ul li a {
+    color: #555;
+}
+
+body.light-mode header nav ul li a.active {
+    color: #000;
+    border-bottom: 1px solid #000;
+}
+
+body.light-mode header nav ul li a:hover {
+    color: #000;
+}
+
+main {
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Move headers to the right */
+main h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: right; /* Align headers to the right */
+}
+
+.content-section {
+    display: none;
+}
+
+.content-section.active {
+    display: block;
+}
+
+main p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+main a {
+    text-decoration: none;
+    border-bottom: 1px solid;
+    transition: color 0.3s, border-bottom-color 0.3s;
+}
+
+/* Dark Mode Links */
+body.dark-mode main a {
+    color: #a0a0ff;
+    border-bottom-color: #a0a0ff;
+}
+
+body.dark-mode main a:hover {
+    color: #fff;
+    border-bottom-color: #fff;
+}
+
+/* Light Mode Links */
+body.light-mode main a {
+    color: #0000ff;
+    border-bottom-color: #0000ff;
+}
+
+body.light-mode main a:hover {
+    color: #000;
+    border-bottom-color: #000;
+}
+
+
+footer {
+    margin-top: 40px;
+    text-align: center;
+    background-color: #1c1c1c; /* Dark background */
+    padding: 20px 0;
+    width: 100%;
+}
+
+footer {
+    background-color: #20454a; /* Match the dark teal of dark mode */
+}
+
+
+footer h2 {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+footer ul.social-links {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 15px 0;
+}
+
+footer ul.social-links li {
+    margin: 0 20px; /* Add a bit more space between the icons */
+}
+
+footer ul.social-links li a {
+    color: #fff;
+    font-size: 1.8rem; /* Icon size */
+    transition: color 0.3s ease;
+}
+
+footer ul.social-links li a:hover {
+    color: #1da1f2; /* Hover color for icons */
+}
+
+footer p {
+    color: #b3b3b3;
+    font-size: 0.9rem;
+    margin-top: 15px;
+}
+
+#theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+    cursor: pointer;
+ }
+ 
+
+#theme-toggle-button {
+    background-color: transparent;
+    border: none;
+    font-size: 2rem; /* Adjust size as needed */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#theme-toggle-button:hover {
+    transform: scale(1.2); /* Slight zoom effect on hover */
+}
+
+header nav ul li a:hover {
+    color: #f39c12; /* A warm color on hover */
+    border-bottom: 1px solid #f39c12; /* Add a small underline */
+}
+
+/* Footer (Bottom Navigation) Styling */
+.bottom-nav {
+    position: fixed;
+    bottom: 20px; /* Slightly lifted from the bottom */
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 1000; /* Ensures it's always on top */
+    background: transparent; /* Transparent background for shadow effect */
+}
+
+.bottom-nav nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 10px 20px;
+    background-color: #2a2a2a; /* Darker background for the nav container */
+    border-radius: 50px; /* Fully rounded pill-shape */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); /* Subtle shadow for floating effect */
+    width: 80%; /* Adjust based on the desired width */
+    max-width: 500px; /* Max width to limit on larger screens */
+}
+
+.bottom-nav nav ul li {
+    margin: 0 10px;
+}
+
+.bottom-nav nav ul li a {
+    color: #ddd; /* Lighter default link color */
+    text-decoration: none;
+    font-size: 1.2rem; /* Adjust size to match your design */
+    padding: 10px 30px; /* Padding for spacing */
+    border-radius: 25px; /* Make individual buttons rounded */
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.bottom-nav nav ul li a.active {
+    background-color: #3a3a3a; /* Background for active button */
+    color: #fff; /* White text for active link */
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.3); /* Subtle inner shadow */
+}
+
+.bottom-nav nav ul li a:hover,
+.bottom-nav nav ul li a:focus {
+    color: #fff; /* Change color on hover */
+    background-color: #4a4a4a; /* Background change on hover */
+}
+
+/* Subtle gradient effect to simulate the look from the screenshot */
+.bottom-nav nav ul {
+    background: linear-gradient(145deg, #1e1e1e, #3b3b3b); /* Dark gradient effect */
+}
+
+.bottom-nav nav ul li a.active {
+    background: linear-gradient(145deg, #2e2e2e, #4e4e4e); /* Slightly raised effect for active link */
+}

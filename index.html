@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seunfunmi's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="dark-mode">
+    <footer class="bottom-nav">
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('home-section')" class="active">Home</a></li>
+                <li><a href="#" onclick="showSection('about-section')">About</a></li>
+                <li><a href="#" onclick="showSection('blog-section')">Blog</a></li>
+                <li><a href="#" onclick="showSection('talks-section')">Talks</a></li>
+                <li><a href="#" onclick="showSection('projects-section')">Projects</a></li>
+            </ul>
+        </nav>
+    </footer>
+    
+    
+    <main>
+        <section id="home-section" class="content-section active">
+            <h1>Hey 👋, I'm Seunfunmi</h1>
+            <p>
+                I'm a software engineer deeply interested in bridging connections between developers and
+                state-of-the-art technology. I build <a href="#">products</a>, and write <a href="#">technical
+                    articles</a>. In my free time, you can find me contributing to <a href="#">open-source</a> projects
+                or developing <a href="#">solutions</a> for challenges I have previously encountered.
+            </p>
+            <p>
+                Presently, I’m learning GoLang <span class="go-icon">🐹</span> and I’m surprised at its inherent
+                simplicity and remarkable performance as a programming language. As you must have possibly guessed, this
+                portfolio is still a WIP. 🚧
+            </p>
+        </section>
+
+        <section id="about-section" class="content-section">
+            <div class="about-header">
+                <h1>
+                    Software Engineer and Backend Developer <br />
+                    living and working in <span class="highlight">Nigeria.</span>
+                </h1>
+            </div>
+
+            <p class="about-description">
+                Hey 👋, I’m Seunfunmi, a software engineer currently working at Turing. I specialize in backend development
+                and cloud solutions.
+                I’m passionate about designing highly scalable systems and improving efficiency through automation. I
+                have extensive
+                experience with technologies like Python, AWS, and FastAPI. I’m also a huge fan of developer communities
+                and often
+                contribute to open-source projects.
+            </p>
+
+            <p class="about-description">
+                Previously, I worked with companies like <span class="highlight">Sendme.ng</span> and <span
+                    class="highlight">LOPA</span>,
+                leading teams in developing customer-facing applications and improving the overall software
+                architecture.
+            </p>
+
+            <!-- Work experience -->
+            <div class="experience">
+                <h2>Turing</h2>
+                <h3>Software Engineer</h3>
+                <p>
+                    Building scalable backend systems and implementing cloud-based solutions for clients worldwide.
+                    Working with
+                    cloud infrastructure (AWS), Python, and CI/CD pipelines.
+                </p>
+                <p class="experience-date">2023 - Present</p>
+
+                <h2>Sendme.ng</h2>
+                <h3>Software Engineer</h3>
+                <p>
+                    Led the development of payment solutions and integrations for small and medium-sized enterprises,
+                    focusing on performance optimization and scalability.
+                </p>
+                <p class="experience-date">2022 - 2023</p>
+
+                <h2>LOPA</h2>
+                <h3>Software Engineer</h3>
+                <p>
+                    Spearheaded the development of customer-centric applications, worked closely with product teams to
+                    deliver
+                    solutions that solve key pain points for end users.
+                </p>
+                <p class="experience-date">2021 - 2022</p>
+            </div>
+        </section>
+
+
+        <section id="blog-section" class="content-section">
+            <h1>Articles by Seunfunmi</h1>
+            <div class="blog-post">
+                <h2>Article 1</h2>
+                <small>Aug 20th, 2024</small>
+            </div>
+        </section>
+
+        <section id="talks-section" class="content-section">
+            <h1>Here are some talks I've given</h1>
+        </section>
+
+        <section id="projects-section" class="content-section">
+            <h1>Some selected projects</h1>
+        </section>
+
+        <!-- Dark and Light Mode Toggle Button -->
+        <div id="theme-toggle">
+            <button id="theme-toggle-button">
+                🌙 <!-- This will display as a moon icon by default (dark mode) -->
+            </button>
+        </div>
+    </main>
+
+
+    <i class=""></i>
+
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.querySelectorAll('nav ul li a').forEach(link => {
+                link.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+            document.querySelector(`nav ul li a[onclick="showSection('${sectionId}')"]`).classList.add('active');
+        }
+
+        // Theme Toggle Functionality
+        const toggleButton = document.getElementById('theme-toggle-button');
+        const body = document.body;
+
+        toggleButton.addEventListener('click', () => {
+            body.classList.toggle('light-mode');
+            body.classList.toggle('dark-mode');
+
+            // Change icon based on current theme
+            if (body.classList.contains('light-mode')) {
+                toggleButton.textContent = '☀️'; // Light mode (Sun)
+            } else {
+                toggleButton.textContent = '🌙'; // Dark mode (Moon)
+            }
+        });
+    </script>
+</body>
+
+</html>
