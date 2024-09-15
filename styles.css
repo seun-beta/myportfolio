@@ -1,6 +1,6 @@
 /* Light and Dark Mode Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: solway;
     margin: 0;
     padding: 0;
     display: flex;
@@ -9,11 +9,14 @@ body {
     min-height: 100vh;
     transition: background-color 0.3s, color 0.3s;
     padding:20px;
+    line-height: 1.8;
+    text-align: justify;
 }
 
 /* Dark Mode */
 body.dark-mode {
     background-color: #20454a; /* Replace with the actual color from the image */
+    background: linear-gradient(135deg, #20454a, #1b3a3d);
     color: #fff;
 }
 
@@ -25,7 +28,7 @@ body.light-mode {
 
 header {
     width: 100%;
-    text-align: center;
+    text-align: justify;
     margin-bottom: 20px;
 }
 
@@ -50,7 +53,7 @@ header nav ul li a {
 }
 
 .about-header h1{
-   text-align:left;
+   text-align:justify;
 }
 
 /* Dark Mode Links */
@@ -136,6 +139,12 @@ body.light-mode main a:hover {
     border-bottom-color: #000;
 }
 
+main a:hover {
+    color: #ff6347;
+    border-bottom-color: #ff6347;
+    transition: color 0.3s ease, border-bottom-color 0.3s ease;
+  }
+
 #home-section h1{
     text-align:left;
 }
@@ -147,11 +156,13 @@ body.light-mode main a:hover {
 
 footer {
     margin-top: 40px;
-    text-align: center;
+    text-align: justify;
     background-color: #1c1c1c; /* Dark background */
     padding: 20px 0;
     width: 100%;
     background-color: #20454a; /* Match the dark teal of dark mode */
+    background: linear-gradient(145deg, #20454a, #183438);
+    padding: 30px 0;
 }
 
 
@@ -269,13 +280,9 @@ header nav ul li a:hover {
     background-color: #4a4a4a; /* Background change on hover */
 }
 
-/* Subtle gradient effect to simulate the look from the screenshot */
-.bottom-nav nav ul {
-    background: linear-gradient(145deg, #1e1e1e, #3b3b3b); /* Dark gradient effect */
-}
 
 .bottom-nav nav ul li a.active {
-    background: linear-gradient(145deg, #20454a, #183438); /* Stronger gradient */
+    background: linear-gradient(145deg,#c7c7c7); /* Stronger gradient */
 }
 
 @media (max-width: 400px) {
