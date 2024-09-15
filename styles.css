@@ -15,7 +15,7 @@ body {
 
 /* Dark Mode */
 body.dark-mode {
-    background-color: #20454a; /* Replace with the actual color from the image */
+    background-color: #20454a; 
     background: linear-gradient(135deg, #20454a, #1b3a3d);
     color: #fff;
 }
@@ -53,7 +53,7 @@ header nav ul li a {
 }
 
 .about-header h1{
-   text-align:justify;
+   text-align:left;
 }
 
 /* Dark Mode Links */
