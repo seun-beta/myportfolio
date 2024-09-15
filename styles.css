@@ -8,6 +8,7 @@ body {
     align-items: center;
     min-height: 100vh;
     transition: background-color 0.3s, color 0.3s;
+    padding:20px;
 }
 
 /* Dark Mode */
@@ -28,6 +29,7 @@ header {
     margin-bottom: 20px;
 }
 
+
 header nav ul {
     display: flex;
     justify-content: center;
@@ -45,6 +47,10 @@ header nav ul li a {
     font-weight: bold;
     cursor: pointer;
     transition: color 0.3s, border-bottom-color 0.3s;
+}
+
+.about-header h1{
+   text-align:left;
 }
 
 /* Dark Mode Links */
@@ -78,14 +84,14 @@ body.light-mode header nav ul li a:hover {
 main {
     max-width: 800px;
     width: 100%;
-    padding: 20px;
+    padding: 20px 20px 90px 20px;
+    margin-top:40px;
 }
 
 /* Move headers to the right */
 main h1 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    text-align: right; /* Align headers to the right */
 }
 
 .content-section {
@@ -130,6 +136,14 @@ body.light-mode main a:hover {
     border-bottom-color: #000;
 }
 
+#home-section h1{
+    text-align:left;
+}
+
+#home-section p{
+    text-align:justify;
+}
+
 
 footer {
     margin-top: 40px;
@@ -137,9 +151,6 @@ footer {
     background-color: #1c1c1c; /* Dark background */
     padding: 20px 0;
     width: 100%;
-}
-
-footer {
     background-color: #20454a; /* Match the dark teal of dark mode */
 }
 
@@ -179,7 +190,7 @@ footer p {
 }
 
 #theme-toggle {
-    position: absolute;
+    position: fixed;
     top: 20px;
     right: 30px;
     font-size: 2rem;
@@ -211,6 +222,7 @@ header nav ul li a:hover {
     left: 0;
     right: 0;
     width: 100%;
+    align-items: center;
     display: flex;
     justify-content: center;
     z-index: 1000; /* Ensures it's always on top */
@@ -220,26 +232,29 @@ header nav ul li a:hover {
 .bottom-nav nav ul {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     list-style-type: none;
-    padding: 10px 20px;
+    padding: 10px 7px;
     background-color: #2a2a2a; /* Darker background for the nav container */
     border-radius: 50px; /* Fully rounded pill-shape */
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); /* Subtle shadow for floating effect */
-    width: 80%; /* Adjust based on the desired width */
-    max-width: 500px; /* Max width to limit on larger screens */
+    height:35px;
 }
 
 .bottom-nav nav ul li {
-    margin: 0 10px;
+    margin: 0 5px;
 }
+
+
 
 .bottom-nav nav ul li a {
     color: #ddd; /* Lighter default link color */
     text-decoration: none;
     font-size: 1.2rem; /* Adjust size to match your design */
-    padding: 10px 30px; /* Padding for spacing */
+    padding: 10px 15px; /* Padding for spacing */
     border-radius: 25px; /* Make individual buttons rounded */
-    transition: color 0.3s ease, background-color 0.3s ease;
+    transition: color 0.3s ease, 
+    background-color 0.3s ease;
 }
 
 .bottom-nav nav ul li a.active {
@@ -260,5 +275,28 @@ header nav ul li a:hover {
 }
 
 .bottom-nav nav ul li a.active {
-    background: linear-gradient(145deg, #2e2e2e, #4e4e4e); /* Slightly raised effect for active link */
+    background: linear-gradient(145deg, #20454a, #183438); /* Stronger gradient */
+}
+
+@media (max-width: 400px) {
+
+    footer{
+        bottom: 0px; /* Lifted slightly from the bottom */
+        margin: 0;
+    }
+
+    .bottom-nav {
+        bottom: 0px; /* Lifted slightly from the bottom */
+        margin: 0;
+        padding:0 !important;
+    }
+
+    .bottom-nav nav ul {
+        border-radius: 0px; /* Fully rounded, creating a pill-shape */
+    }
+
+    nav ul{
+        padding:0;
+        margin:0;
+    }
 }
